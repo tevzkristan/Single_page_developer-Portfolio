@@ -1,0 +1,793 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    background-image: url(./assets/images/image-profile-desktop.webp);
+    background-repeat: no-repeat;
+    background-size: 65vh;
+    background-position-x: 90%;
+    background-position-y: -10vh;
+    overflow-x: hidden;
+}
+
+.open-project {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 60%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: #4DE29E;
+}
+
+*, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Grotesk';
+
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    overflow: visible;
+}
+
+.nav {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+.logo {
+    color: white;
+    font-size: 32px;
+}
+
+nav {
+    width: 15%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav-icon {
+        transform: scale(1.2);
+        cursor: pointer;
+        transition: all .2s ease;
+}
+
+.nav-icon:hover {
+    transform: scale(1.5);
+    
+}
+
+.landing-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
+}
+
+.landing-header {
+    font-size: 96px;
+    color: white;
+    line-height: 124px;
+    letter-spacing: -2px;
+}
+
+span {
+    position: relative; /* Needed to create the ::after element relative to the .underline element */
+    display: inline-block; 
+}
+
+span::after {
+    content: ""; /* This is required for the pseudo-element */
+    position: absolute; /* Position the ::after element relative to the .underline element */
+    bottom: 0px; /* Adjust the value as per your preference to control the distance between text and underline */
+    left: 0;
+    width: 100%; /* Makes the ::after element span the entire width of .underline */
+    height: 8px; /* Set the height of the underline */
+    background-color: #4DE29E; /* Set the color of the underline */
+    border-radius: 2px;
+}
+
+.landing-desc {
+    color: #ADADAD;
+    font-size: 24px;
+    width: 40%;
+    line-height: 33px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.contact-btn {
+    background-color: transparent; 
+    height: 60px;
+    width: 200px;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    /* border-bottom: 4px solid #4DE29E; */
+    cursor: pointer;
+    position: relative;
+}
+
+.contact-btn::after {
+    content: ""; /* This is required for the pseudo-element */
+    position: absolute; /* Position the ::after element relative to the .underline element */
+    bottom: 0px;
+    left: 0;
+    width: 100%; /* Makes the ::after element span the entire width of .underline */
+    height: 3px; /* Set the height of the underline */
+    background-color: #4DE29E; /* Set the color of the underline */
+    border-radius: 2px;
+    transition: all .2s ease;
+}
+
+.contact-btn:hover::after {
+    height: 100%;
+    z-index: -1;
+}
+
+.page-2 {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+hr {
+   margin-top: -20px;
+
+}
+
+.skills-section {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.skill-cont {
+    width: 30%;
+    
+}
+.skill {
+    color: white;
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.exp {
+    color: #ADADAD;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.project-sec {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.proj-head {
+    width: 50%;
+    color: white;
+    font-size: 96px;
+    justify-self: start;
+    margin-bottom: 60px;
+}
+
+.btn-div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.project {
+    width: 46%;
+    transition: all .3s ease;
+}
+
+
+
+.proj-image {
+    width: 100%;
+    height: 55vh;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: all 0.3s ease;
+
+}
+
+.proj-image:hover {
+    background-size: 105%;
+    
+    .project-hover {
+
+        display: flex;
+    }
+}
+
+.proj-title {
+    color: white;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.proj-desc-div {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.proj-desc {
+    color: #ADADAD;
+    font-size: 24px;
+}
+
+.proj-desc-lang {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.im1 {
+    background-image: url(./assets/images/thumbnail-project-1-large.webp);
+}
+
+.im1:hover {
+    background-size: 105%;
+}
+
+.im2 {
+    background-image: url(./assets/images/thumbnail-project-2-large.webp);
+}
+
+.im3 {
+    background-image: url(./assets/images/thumbnail-project-3-large.webp);
+}
+
+.im4 {
+    background-image: url(./assets/images/thumbnail-project-4-large.webp);
+}
+
+.im5 {
+    background-image: url(./assets/images/thumbnail-project-5-large.webp);
+}
+
+.im6 {
+    background-image: url(./assets/images/thumbnail-project-6-large.webp);
+}
+
+.project-hover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.695);
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all .3s ease;
+
+}
+
+.hover-t {
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    transition: all .3s ease;
+    transition: all .3s ease;
+
+}
+
+.hover-t:hover {
+    text-decoration: underline;
+}
+
+
+
+.contact-sec {
+    width: 100%;
+    height: auto;
+    background-color: #242424;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-top: 60px;
+    z-index: 1;
+    padding-bottom: 100px;
+}
+
+.con-title {
+    color: white;
+    font-size: 96px;
+}
+
+.cont-desc {
+    color: #ADADAD;
+    font-size: 24px;
+    width: 80%;
+}
+
+.form {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+}
+
+.input {
+    width: 80%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ADADAD;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+    caret-color: #4DE29E;
+    align-self: flex-end;
+}
+
+.message {
+    width: 80%;
+    max-height: 200px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ADADAD;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+    caret-color: #4DE29E;
+    align-self: flex-end;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+::placeholder {
+    color: #ADADAD;
+    font-size: 18px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.send-btn {
+    background-color: transparent; 
+    height: 60px;
+    width: 200px;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    /* border-bottom: 4px solid #4DE29E; */
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    align-self: flex-end;
+}
+
+.send-btn::after {
+    content: ""; /* This is required for the pseudo-element */
+    position: absolute; /* Position the ::after element relative to the .underline element */
+    bottom: 0px;
+    left: 0;
+    width: 100%; /* Makes the ::after element span the entire width of .underline */
+    height: 3px; /* Set the height of the underline */
+    background-color: #4DE29E; /* Set the color of the underline */
+    border-radius: 2px;
+    transition: all .2s ease;
+}
+
+.send-btn:hover::after {
+    height: 100%;
+    z-index: -1;
+}
+
+
+.centered-contact {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    background-color: #242424;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-top: 60px;
+    z-index: 1;
+}
+
+
+.footer-sec {
+    width: 100%;
+    height: 20vh;
+    background-color: #242424;
+}
+
+.footer {
+    
+    width: 80%;
+    margin: auto;
+    border-top: solid 2px #ADADAD;
+}
+
+.footer-nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo2 {
+    color: white;
+    font-size: 32px;
+}
+
+.nav-icon:hover {
+    fill: #4DE29E;
+}
+
+.ring1 {
+    position: absolute;
+    top: 15vh;
+    left: -200px;
+    transform: scale(1.5);
+}
+
+.ring2 {
+    top: 130vh;
+    right: -250px;
+}
+
+.ring3 {
+    top: 410vh;
+    left: -200px;
+    z-index: 2;
+}
+
+.ring {
+    position: absolute;
+    transform: scale(1.5);
+}
+
+.circle {
+    position: absolute;
+    top: 70%;
+    left: 55%;
+    transform: scale(1.3);
+}
+
+
+@media screen and (max-width: 1023px) {
+    
+    body {
+        background-image: url(./assets/images/image-profile-tablet.webp);
+        background-size: 45vh;
+        background-position-x: 100%;
+        overflow-x: hidden;
+        
+    }
+
+    .landing-header {
+        font-size: 64px;
+        line-height: 83px;
+    }
+
+    .landing-desc {
+        width: 60%;
+    }
+
+    .skills-section {
+        height: 60vh;
+    }
+
+    .skill-cont {
+        width: 50%;
+        margin-bottom: 60px;
+        
+    }
+
+    hr {
+        margin-bottom: 30px;
+    }
+
+    .proj-head {
+        font-size: 64px;
+        margin-bottom: 30px;
+    }
+
+    .project-sec {
+        align-items: center;
+    }
+
+    .btn-div {
+        width: 50%;
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+
+    .proj-image {
+        margin-bottom: 5px;
+       height: 35vh;
+    }
+
+    .proj-title {
+        font-size: 24px;
+    }
+
+    .proj-desc-div {
+        width: 40%;
+    }
+
+    .proj-desc {
+        font-size: 18px;
+    }
+
+    .con-title {
+        font-size: 64px;
+    }
+
+    .cont-desc {
+        width: 70%;
+        font-size: 18px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    nav {
+        width: 40%;
+    }
+
+    .open-project {
+        display: flex;
+     
+    }
+
+    .proj-desc-div {
+        width: 100%;
+    }
+
+  }
+
+  @media screen and (max-width: 767px) {
+
+
+
+    .open-project {
+        display: flex;
+     
+    }
+    
+    body {
+        background-image: url(./assets/images/image-profile-mobile.webp);
+        background-position: center top;
+        background-size: 25vh;
+    }
+
+    .nav {
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 20vh;
+    }
+
+    .ring1 {
+        top: 25vh;
+        transform: scale(1.1);
+        left: -300px;
+    }
+
+    .landing-page {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .landing-header {
+        font-size: 48px;
+        text-align: center;
+        line-height: 62px;
+        margin-top: 60px;
+    }
+
+    .landing-desc {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    span::after {
+        content: ""; /* This is required for the pseudo-element */
+        position: absolute; /* Position the ::after element relative to the .underline element */
+        bottom: 0px; /* Adjust the value as per your preference to control the distance between text and underline */
+        left: 0;
+        width: 100%; /* Makes the ::after element span the entire width of .underline */
+        height: 4px; /* Set the height of the underline */
+        background-color: #4DE29E; /* Set the color of the underline */
+        border-radius: 2px;
+    }
+
+    .circle {
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: scale(1.3);
+    }
+
+    .skill-cont {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .skill {
+        margin-bottom: 0px;
+    }
+
+    .skills-section {
+        height: 80vh;
+        
+    }
+
+    .project-sec {
+        
+    }
+
+    .ring2 {
+        top: 190%;
+    }
+
+    .project {
+        width: 100%;
+        height: auto;
+    }
+
+    .proj-image {
+        width: 100%;
+        height: 50vh;
+        margin-bottom: 0px;
+    }
+
+    .proj-title {
+        font-size: 32px;
+    }
+    
+    .proj-desc-div {
+        width: 100%;
+    }
+
+    .proj-desc {
+        font-size: 18px;
+    }
+
+    .centered-contact {
+        flex-direction: column;
+        
+    }
+
+    .contact-sec {
+        padding-top: 10px;
+    }
+
+    .con-sec-text {
+        margin-bottom: 50px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .message {
+        height: 120px;
+    }
+
+    .send-btn {
+        background-color: #4DE29E;
+        color: white;
+    }
+
+    .contact-btn {
+        background-color: #4DE29E;
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .ring3 {
+        top: 660vh;
+        left: -300px;
+        z-index: 2;
+    }
+
+    .proj-head {
+        font-size: 48px;
+    }
+
+    .con-title {
+        font-size: 48px;
+    }
+
+    
+    
+
+  }
+
+
+@media screen and (max-width: 450px) {
+    .open-project {
+        display: flex;
+     
+    }
+
+    .landing-header {
+        font-size: 42px;
+        margin-top: 100px;
+    }
+
+    .landing-desc {
+        width: 100%;
+    }
+
+    .proj-image {
+        height: 30vh;
+        margin-bottom: 10px;
+    }
+
+    .proj-desc-div {
+        width: 100%;
+    }
+
+
+
+
+} 
+
